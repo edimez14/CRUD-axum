@@ -46,7 +46,7 @@ async fn main() {
 
     let app = route(Arc::new(AppState { db: pool.clone() })).layer(cors);
 
-    let listener = TcpListener::bind("0.0.0.0:3000").await.unwrap();
+    let listener = TcpListener::bind("0.0.0.0:8089").await.unwrap();
     axum::serve(listener, app.into_make_service())
         .await
         .unwrap();
