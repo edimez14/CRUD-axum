@@ -16,3 +16,25 @@ services:
       - 8089:8089
     env_file: .env
 
+# services:
+#   server:
+#     build:
+#       context: .
+#       target: final
+#     ports:
+#       - 8089:8089
+#     secrets:
+#       - DATABASE
+#       - DATABASE_URL
+#       - JWT_SECRET
+#     environment:
+#       DATABASE_FILE: /run/secrets/DATABASE
+#       DATABASE_URL_FILE: /run/secrets/DATABASE_URL
+#       JWT_SECRET_FILE: /run/secrets/JWT_SECRET
+# secrets:
+#   DATABASE:
+#     external: true
+#   DATABASE_URL:
+#     external: true
+#   JWT_SECRET:
+#     external: true
